@@ -1,9 +1,12 @@
 package com.devsuperior.pesquisa.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.Instant;
 import java.util.Objects;
+
 
 @Entity
 @Table(name = "tb_record")
@@ -15,6 +18,7 @@ public class Record implements Serializable {
     private String name;
     private Integer age;
     private Instant moment;
+
 
     @ManyToOne
     @JoinColumn(name = "game_id")
